@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run mocha",
-    "watch" : "mocha -wG tests",
-    "mocha" : "mocha tests",
-    "lint" : "eslint ."
+    "watch": "mocha -wG tests",
+    "mocha": "mocha tests",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/linuxenko/lessmd#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^3.8.1",
     "mocha": "^3.1.2"
   }
 }
