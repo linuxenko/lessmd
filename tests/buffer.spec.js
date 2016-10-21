@@ -43,6 +43,15 @@ describe('Testing Buffer object', function() {
     expect(buffer.render()).to.contain('hello');
   });
 
+
+  it('should handle its dimensions', function() {
+    var str = '12\n1234\n22';
+    var buffer = new Buffer(term, cursor, str);
+
+    expect(buffer.maxWidth()).to.be.equal(4);
+    expect(buffer.maxHeight()).to.be.equal(3);
+  });
+
 });
 
 

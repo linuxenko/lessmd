@@ -6,8 +6,6 @@ describe('Testing Renderer object', function() {
 
   it('should be exist', function() {
     expect(Renderer).to.exist;
-    //expect(Renderer).to.throw(TypeError);
-    //
     expect(function() {
       var render = new Renderer();
 
