@@ -8,7 +8,7 @@
     "watch": "mocha -wG tests",
     "mocha": "mocha tests",
     "lint": "eslint lib",
-    "cov": "nyc report --reporter=text-lcov | coveralls"
+    "cov": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",

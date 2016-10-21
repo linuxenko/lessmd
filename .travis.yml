@@ -4,5 +4,4 @@ node_js:
 install:
     - npm i
 script:
-    - npm test
     - npm run cov
