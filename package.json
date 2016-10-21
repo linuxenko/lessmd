@@ -8,7 +8,7 @@
     "watch": "mocha -wG tests",
     "mocha": "mocha tests",
     "lint": "eslint lib",
-    "cov" : "jscover lib lib-cov && mv lib lib-orig && mv lib-cov lib && mocha -R mocha-lcov-reporter tests | coveralls && rm -fr lib && mv lib-orig lib"
+    "cov": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -29,8 +29,7 @@
     "chai": "^3.5.0",
     "coveralls": "^2.11.14",
     "eslint": "^3.8.1",
-    "jscover": "^1.0.0",
     "mocha": "^3.1.2",
-    "mocha-lcov-reporter": "^1.2.0"
+    "nyc": "^8.3.2"
   }
 }
