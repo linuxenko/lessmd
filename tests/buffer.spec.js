@@ -1,5 +1,5 @@
-var Buffer = require('../buffer').Buffer;
-var Vector = require('../buffer').Vector;
+var Buffer = require('../lib/buffer').Buffer;
+var Vector = require('../lib/buffer').Vector;
 var expect = require('chai').expect;
 
 

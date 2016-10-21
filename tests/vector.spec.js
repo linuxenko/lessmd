@@ -1,4 +1,4 @@
-var Vector = require('../buffer').Vector;
+var Vector = require('../lib/buffer').Vector;
 var expect = require('chai').expect;
 
 

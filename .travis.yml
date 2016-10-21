@@ -5,3 +5,4 @@ install:
     - npm i
 script:
     - npm test
+    - npm run cov

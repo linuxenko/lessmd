@@ -7,7 +7,8 @@
     "test": "npm run lint && npm run mocha",
     "watch": "mocha -wG tests",
     "mocha": "mocha tests",
-    "lint": "eslint ."
+    "lint": "eslint lib",
+    "cov" : "jscover lib lib-cov && mv lib lib-orig && mv lib-cov lib && mocha -R mocha-lcov-reporter tests | coveralls && rm -fr lib && mv lib-orig lib"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,10 @@
   "homepage": "https://github.com/linuxenko/lessmd#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.14",
     "eslint": "^3.8.1",
-    "mocha": "^3.1.2"
+    "jscover": "^1.0.0",
+    "mocha": "^3.1.2",
+    "mocha-lcov-reporter": "^1.2.0"
   }
 }
