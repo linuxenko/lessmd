@@ -39,8 +39,8 @@ describe('Testing Buffer object', function() {
 
     expect(buffer).to.be.an('object');
 
-    expect(buffer.render()).to.be.a('string');
-    expect(buffer.render()).to.contain('hello');
+    expect(buffer.render()).to.be.an('array');
+    expect(buffer.render()).to.be.eql(['hello', 'world']);
   });
 
 
