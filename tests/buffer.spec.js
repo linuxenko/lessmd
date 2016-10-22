@@ -34,7 +34,7 @@ describe('Testing Buffer object', function() {
     expect(buffer.buffer.length).to.be.equal(2);
   });
 
-  it('sould render string', function() {
+  it('should render an array', function() {
     var buffer = new Buffer(term,cursor, data);
 
     expect(buffer).to.be.an('object');
