@@ -7,7 +7,8 @@ describe('Testing Renderer object', function() {
   it('should be exist', function() {
     expect(Renderer).to.exist;
     expect(function() {
-      var render = new Renderer();
+      process.env.istest = true;
+      var render = new Renderer(true);
 
       expect(render).to.be.an('object');
       expect(render.isTTY()).to.be.oneOf([true, false]);
