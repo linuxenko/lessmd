@@ -3,6 +3,13 @@
   "version": "0.0.1",
   "description": "Like unix less but for markdown and written with javascript.",
   "main": "index.js",
+  "files": [
+    "bin",
+    "lib",
+    "README.md",
+    "LICENSE",
+    "dot-lessmd-sample.js"
+  ],
   "scripts": {
     "test": "npm run lint && npm run mocha",
     "watch": "mocha -wG tests",
@@ -17,7 +24,10 @@
   "keywords": [
     "terminal",
     "less",
-    "markdown"
+    "pager",
+    "terminal-pager",
+    "markdown",
+    "markdown-to-terminal"
   ],
   "author": "Svetlana Linuxenko <linuxenko@yahoo.com> (http://www.linuxenko.pro)",
   "license": "MIT",
@@ -31,5 +41,9 @@
     "eslint": "^3.8.1",
     "mocha": "^3.1.2",
     "nyc": "^8.3.2"
+  },
+  "dependencies": {
+    "color-header": "^1.0.0",
+    "marked": "^0.3.6"
   }
 }

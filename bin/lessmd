@@ -1,25 +1,37 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
+var os = require('os');
 var path = require('path');
 
-var Renderer = require('./lib/renderer');
-var headerPlugin = require('./lib/plugin/header');
-var footerPlugin = require('./lib/plugin/footer');
-var textPlugin = require('./lib/plugin/text');
+var userFile = path.resolve(os.homedir(), '.lessmd.js');
 
+if (fs.existsSync(userFile)) {
+  global.UserSettings = require(userFile);
+}
+
+var Renderer = require('../lib/renderer');
+var headerPlugin = require('../lib/plugin/header');
+var footerPlugin = require('../lib/plugin/footer');
+var textPlugin = require('../lib/plugin/text');
+var markPlugin = require('../lib/plugin/markdown');
 
 var filename = '-';
 var data = '';
 
 var lessmd = (function(isPipe) {
-  /* TODO markdown + text plugin for pipes */
-  if (isPipe) {
+  var isMarkdown = markPlugin.isMarkdown(data);
+
+  data = textPlugin(data);
+
+  if (isMarkdown) {
+    data = markPlugin.Markdown(data);
+  }
+
+  if (isPipe || !process.stdout.isTTY) {
     process.stdout.write(data);
     process.exit(0);
   }
-
-  data = textPlugin(data);
 
   var render = new Renderer();
 
@@ -31,6 +43,10 @@ var lessmd = (function(isPipe) {
     render.footer = function() {
       return footerPlugin.call(render, path.basename(filename));
     };
+  }
+
+  if (isMarkdown) {
+    data = markPlugin.toBuffer(data);
   }
 
   render.display(data);
