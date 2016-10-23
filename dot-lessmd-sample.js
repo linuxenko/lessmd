@@ -15,6 +15,7 @@ module.exports = {
 //    listitem :,
 //  },
 //  theme : {
+//    draw : false
 //    text : '\033[1;37;49m',
 //    strong : '\033[35;49m'
 //  },

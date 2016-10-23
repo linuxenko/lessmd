@@ -16,6 +16,7 @@ var footerPlugin = require('../lib/plugin/footer');
 var textPlugin = require('../lib/plugin/text');
 var markPlugin = require('../lib/plugin/markdown');
 
+var render;
 var filename = '-';
 var data = '';
 
@@ -24,7 +25,7 @@ var lessmd = (function(isPipe) {
 
   data = textPlugin(data);
 
-  if (isMarkdown) {
+  if (filename === '-' || isMarkdown) {
     data = markPlugin.Markdown(data);
   }
 
@@ -33,7 +34,9 @@ var lessmd = (function(isPipe) {
     process.exit(0);
   }
 
-  var render = new Renderer();
+  if (!render) {
+    render = new Renderer();
+  }
 
   if (filename !== '-') {
     render.header = function() {
@@ -53,10 +56,22 @@ var lessmd = (function(isPipe) {
 }).bind(this);
 
 
-if (process.argv.length > 2 && fs.existsSync(process.argv[2])) {
+if (process.argv.length > 2 && process.argv[2]) {
   filename = process.argv[2];
-  data = fs.readFileSync(filename).toString('utf8');
-  lessmd();
+  if (fs.existsSync(filename)) {
+    filename = process.argv[2];
+    data = fs.readFileSync(filename).toString('utf8');
+    lessmd();
+
+    fs.watchFile(filename, { interval : 700 }, function() {
+      data = fs.readFileSync(filename).toString('utf8');
+      lessmd();
+    });
+
+  } else {
+    process.stdout.write('no such file ' + filename +'\n');
+    process.exit(0);
+  } 
 } else {
   process.stdin.on('data', function(str) {
     data += str;
