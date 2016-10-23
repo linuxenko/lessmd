@@ -1,8 +1,10 @@
 {
   "name": "lessmd",
-  "version": "0.0.1",
-  "description": "Like unix less but for markdown and written with javascript.",
-  "main": "index.js",
+  "version": "0.1.2",
+  "description": "Minimal marked based unix terminal document viewer/pager with many features like markdown to terminal conversion file change watching and more.",
+  "bin" : {
+    "lessmd" : "./bin/lessmd"
+  },
   "files": [
     "bin",
     "lib",
