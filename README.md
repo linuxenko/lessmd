@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/linuxenko/lessmd.svg?branch=master)](https://travis-ci.org/linuxenko/lessmd) [![Dependency Status](https://dependencyci.com/github/linuxenko/lessmd/badge)](https://dependencyci.com/github/linuxenko/lessmd) [![Coverage Status](https://coveralls.io/repos/github/linuxenko/lessmd/badge.svg)](https://coveralls.io/github/linuxenko/lessmd)
 
-[![asciicast](https://asciinema.org/a/90323.png)](https://asciinema.org/a/90323) [![asciicast](https://asciinema.org/a/baujqagwnhzy41ssoybgz4aat.png)](https://asciinema.org/a/baujqagwnhzy41ssoybgz4aat) [![asciicast](https://asciinema.org/a/3x2d09zt795qwm4v0dehrosox.png)](https://asciinema.org/a/3x2d09zt795qwm4v0dehrosox) [![asciicast](https://asciinema.org/a/bz0h8cujw3nzvt3c0lcmniltl.png)](https://asciinema.org/a/bz0h8cujw3nzvt3c0lcmniltl)
+[![asciicast](https://asciinema.org/a/90323.png)](https://asciinema.org/a/90323)
 
 [Lessmd](https://git.io/lessmd) - unix terminal document viewer/pager with markdown 
 and piping support.
