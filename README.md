@@ -44,6 +44,8 @@ Saving output into file for some prompt , motd, issue file.
  | lessmd | tee /etc/motd
 ```
 
+[![pipe example](https://raw.githubusercontent.com/linuxenko/lessmd/master/misc/pipe-example.png)](https://raw.githubusercontent.com/linuxenko/lessmd/master/misc/pipe-example.png)
+
 ### Installation
 
 ```
