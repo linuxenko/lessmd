@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/linuxenko/lessmd.svg?branch=master)](https://travis-ci.org/linuxenko/lessmd)
 [![CircleCI](https://circleci.com/gh/linuxenko/lessmd.svg?style=svg)](https://circleci.com/gh/linuxenko/lessmd)
 [![Dependency Status](https://dependencyci.com/github/linuxenko/lessmd/badge)](https://dependencyci.com/github/linuxenko/lessmd) [![Coverage Status](https://coveralls.io/repos/github/linuxenko/lessmd/badge.svg)](https://coveralls.io/github/linuxenko/lessmd)
+[![dependencies Status](https://david-dm.org/linuxenko/lessmd/status.svg)](https://david-dm.org/linuxenko/lessmd)
 
 [![asciicast](https://asciinema.org/a/90323.png)](https://asciinema.org/a/90323)
 
