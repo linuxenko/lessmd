@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Lessmd by linuxenko</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Lessmd</h1>
+        <h2>Minimal marked based unix terminal document viewer/pager with many features like markdown to terminal translation, file change watching and more.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/linuxenko/lessmd/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/linuxenko/lessmd/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/linuxenko/lessmd" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p><a href="https://git.io/lessmd">Lessmd</a> - unix terminal document viewer/pager with markdown 
+and piping support.</p>
+
+<p><a href="https://raw.githubusercontent.com/linuxenko/lessmd/master/misc/lessmd-screenshot.png"><img src="https://raw.githubusercontent.com/linuxenko/lessmd/master/misc/lessmd-screenshot.png" alt="lessmd screenshot"></a></p>
+
+<h3>
+<a id="why-" class="anchor" href="#why-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why ?</h3>
+
+<ul>
+<li>It is JavaScript</li>
+<li>Minimal and fast</li>
+<li>Unix like pager with navigation</li>
+<li>Displaying markdown with colors</li>
+<li>Can translate markdown into colored output</li>
+<li>Configurable user interface</li>
+<li>Support files and pipes</li>
+<li>With livereload (watching the file)</li>
+<li>Markdown color theming support</li>
+</ul>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>Pager mode:</p>
+
+<div class="highlight highlight-source-shell"><pre>  lessmd README.md</pre></div>
+
+<p>Shortcuts:</p>
+
+<ul>
+<li>
+<code>q</code> or <code>ctrl+c</code> exit</li>
+</ul>
+
+<p>Piping with another programs:</p>
+
+<div class="highlight highlight-source-shell"><pre>  lessmd <span class="pl-k">&lt;</span> README.md</pre></div>
+
+<p>Saving output into file for some prompt , motd, issue file.</p>
+
+<div class="highlight highlight-source-shell"><pre> <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span># welcome\n * do not touch anything \n * just press Ctrl+D<span class="pl-pds">"</span></span> \
+ <span class="pl-k">|</span> lessmd <span class="pl-k">|</span> tee /etc/motd</pre></div>
+
+<p><a href="https://raw.githubusercontent.com/linuxenko/lessmd/master/misc/pipe-example.png"><img src="https://raw.githubusercontent.com/linuxenko/lessmd/master/misc/pipe-example.png" alt="pipe example"></a></p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
+
+<pre><code>  npm install -g lessmd
+</code></pre>
+
+<h3>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h3>
+
+<p>Lessmd looks for user settings inside of the home directory <code>.lessmd.js</code>.</p>
+
+<p>Example of the <code>.lessmd.js</code>:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">module</span>.<span class="pl-smi">exports</span> <span class="pl-k">=</span> {
+  colors <span class="pl-k">:</span> {    <span class="pl-c">/// markdown theming colors</span>
+    text <span class="pl-k">:</span> ,    
+    lang <span class="pl-k">:</span> ,
+    heading <span class="pl-k">:</span> ,
+    code <span class="pl-k">:</span> ,
+    quote <span class="pl-k">:</span> ,
+    em <span class="pl-k">:</span> ,
+    codespan <span class="pl-k">:</span> ,
+    strong <span class="pl-k">:</span> ,
+    html <span class="pl-k">:</span> ,
+    del <span class="pl-k">:</span> ,
+    link <span class="pl-k">:</span> ,
+    hr <span class="pl-k">:</span> ,
+    listitem <span class="pl-k">:</span>,
+  },
+  theme <span class="pl-k">:</span> {
+    draw <span class="pl-k">:</span> <span class="pl-c1">false</span>       <span class="pl-c">// disable any ui (header and footer bars)</span>
+    text <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,         <span class="pl-c">// text style</span>
+    strong <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>        <span class="pl-c">// bold text style </span>
+  },
+  <span class="pl-en">headerfn</span> <span class="pl-k">:</span> <span class="pl-k">function</span>() { <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">'</span>header<span class="pl-pds">'</span></span>; }, <span class="pl-c">// custom header fn,</span>
+  <span class="pl-en">footerfn</span> <span class="pl-k">:</span> <span class="pl-k">function</span>() { <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">'</span>footer<span class="pl-pds">'</span></span>; }  <span class="pl-c">// custom footer fn</span>
+};</pre></div>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p>MIT (c) Svetlana Linuxenko</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
