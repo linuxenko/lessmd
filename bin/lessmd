@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+global.UserSettings = {};
+
 var fs = require('fs');
 var os = require('os');
 var path = require('path');
