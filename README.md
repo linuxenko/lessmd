@@ -7,6 +7,9 @@
 [![dependencies Status](https://david-dm.org/linuxenko/lessmd/status.svg)](https://david-dm.org/linuxenko/lessmd)
 [![devDependencies Status](https://david-dm.org/linuxenko/lessmd/dev-status.svg)](https://david-dm.org/linuxenko/lessmd?type=dev)
 
+[![NPM](https://nodei.co/npm-dl/lessmd.png)](https://nodei.co/npm/lessmd/)
+
+
 [![asciicast](https://asciinema.org/a/90323.png)](https://asciinema.org/a/90323)
 
 [Lessmd](https://git.io/lessmd) - unix terminal document viewer/pager with markdown 
@@ -90,6 +93,12 @@ module.exports = {
   footerfn : function() { return 'footer'; }  // custom footer fn
 };
 ```
+
+### ChangeLog
+
+**1.0.1 - 2016-11-03**
+
+  * Added original less keybindings
 
 
 ### License
