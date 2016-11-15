@@ -96,6 +96,10 @@ module.exports = {
 
 ### ChangeLog
 
+**1.1.0 - 2016-11-15**
+
+  * html options for marked (sanityze, smartypants)
+
 **1.0.1 - 2016-11-03**
 
   * Added original less keybindings
