@@ -98,7 +98,9 @@ module.exports = {
 
 **1.1.0 - 2016-11-15**
 
-  * html options for marked (sanityze, smartypants)
+  * Html options for marked (sanityze, smartypants)
+  * `h,j,k,l` bindings
+  * Smaller chunks colorization for view mode
 
 **1.0.1 - 2016-11-03**
 
