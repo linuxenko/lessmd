@@ -96,6 +96,10 @@ module.exports = {
 
 ### ChangeLog
 
+**1.2.0**
+
+  * Bug with long slices
+
 **1.1.0 - 2016-11-15**
 
   * Html options for marked (sanityze, smartypants)
