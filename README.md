@@ -1,15 +1,15 @@
 ### Lessmd
 
 [![npm version](https://img.shields.io/npm/v/lessmd.svg?style=flat-square)](https://www.npmjs.com/package/lessmd)
-[![Build Status](https://travis-ci.org/linuxenko/lessmd.svg?branch=master)](https://travis-ci.org/linuxenko/lessmd)
-[![Dependency Status](https://dependencyci.com/github/linuxenko/lessmd/badge?style=flat-square)](https://dependencyci.com/github/linuxenko/lessmd) [![Coverage Status](https://coveralls.io/repos/github/linuxenko/lessmd/badge.svg?style=flat-square)](https://coveralls.io/github/linuxenko/lessmd)
+[![Build Status](https://img.shields.io/travis/linuxenko/lessmd?style=flat-square)](https://travis-ci.org/linuxenko/lessmd)
+[![Coverage Status](https://img.shields.io/coveralls/github/linuxenko/lessmd?style=flat-square)](https://coveralls.io/github/linuxenko/lessmd)
 [![dependencies Status](https://david-dm.org/linuxenko/lessmd/status.svg?style=flat-square)](https://david-dm.org/linuxenko/lessmd)
 [![devDependencies Status](https://david-dm.org/linuxenko/lessmd/dev-status.svg?style=flat-square)](https://david-dm.org/linuxenko/lessmd?type=dev)
 
 
 [![asciicast](https://asciinema.org/a/90323.png)](https://asciinema.org/a/90323)
 
-[Lessmd](https://git.io/lessmd) - terminal  viewer/pager with markdown and piping support.
+[Lessmd](https://git.io/lessmd) is a terminal viewer/pager with markdown and piping support.
 
 ### Why ?
 
@@ -40,7 +40,7 @@ Piping with another programs:
   lessmd < README.md
 ```
 
-Saving output into file for some prompt, motd, issue file.
+To save some output into a file, which you can use as a motd or an issue files.
 
 ```sh
  echo "# welcome\n * do not touch anything \n * just press Ctrl+D" \
@@ -58,7 +58,7 @@ Saving output into file for some prompt, motd, issue file.
 
 ### Configuration
 
-Lessmd looks for user settings inside of the home directory `.lessmd.js`.
+Lessmd looks for user settings inside of a home directory, the filename is `.lessmd.js`.
 
 Example of the `.lessmd.js`:
 
@@ -82,7 +82,7 @@ module.exports = {
   theme : {
     draw : false       // disable any ui (header and footer bars)
     text : '',         // text style
-    strong : ''        // bold text style 
+    strong : ''        // bold text style
   },
   headerfn : function() { return 'header'; }, // custom header fn,
   footerfn : function() { return 'footer'; }  // custom footer fn
