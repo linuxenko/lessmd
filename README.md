@@ -1,7 +1,7 @@
 ### Lessmd
 
 [![npm version](https://img.shields.io/npm/v/lessmd.svg?style=flat-square)](https://www.npmjs.com/package/lessmd)
-[![Build Status](https://img.shields.io/coveralls/github/linuxenko/lessmd?style=flat-square)](https://travis-ci.org/linuxenko/lessmd)
+[![Build Status](https://img.shields.io/travis/linuxenko/lessmd?style=flat-square)](https://travis-ci.org/linuxenko/lessmd)
 [![Coverage Status](https://img.shields.io/coveralls/github/linuxenko/lessmd?style=flat-square)](https://coveralls.io/github/linuxenko/lessmd)
 [![dependencies Status](https://david-dm.org/linuxenko/lessmd/status.svg?style=flat-square)](https://david-dm.org/linuxenko/lessmd)
 [![devDependencies Status](https://david-dm.org/linuxenko/lessmd/dev-status.svg?style=flat-square)](https://david-dm.org/linuxenko/lessmd?type=dev)
