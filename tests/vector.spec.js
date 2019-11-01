@@ -1,7 +1,6 @@
 var Vector = require('../lib/buffer').Vector;
 var expect = require('chai').expect;
 
-
 describe('Testing Vector object', function() {
 
   it('should exist and can be created', function() {
@@ -22,7 +21,6 @@ describe('Testing Vector object', function() {
 
     testCoords.x = 50;
 
-    expect(testCoords.x).to.be.equal(50);  
+    expect(testCoords.x).to.be.equal(50);
   });
-
 });

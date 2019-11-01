@@ -14,8 +14,7 @@
   ],
   "scripts": {
     "test": "npm run lint && npm run mocha",
-    "watch": "mocha -wG tests",
-    "mocha": "mocha tests",
+    "mocha": "mocha tests/",
     "lint": "eslint lib",
     "cov": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
@@ -40,7 +39,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^3.0.7",
-    "eslint": "^3.8.1",
+    "eslint": "^6.6.0",
     "mocha": "^6.2.2",
     "nyc": "^14.1.1"
   },
