@@ -1,6 +1,6 @@
 {
   "name": "lessmd",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Minimal marked based unix terminal document viewer/pager with many features like markdown to terminal translation, file change watching and more.",
   "bin": {
     "lessmd": "./bin/lessmd"
@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/linuxenko/lessmd#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.2.0",
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
     "mocha": "^6.2.2",
