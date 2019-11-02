@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/linuxenko/lessmd#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.2.0",
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
     "mocha": "^6.2.2",
